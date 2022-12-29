@@ -1,0 +1,28 @@
+touch.contact_form_submissions_list:
+  path: '/admin/content/contact-form'
+  defaults:
+    _title: 'Contact form'
+    _controller: '\Drupal\touch\Controller\TouchSubmissionsListController::display'
+  requirements:
+    _permission: 'administer contact form submissions'
+
+touch.contact_form_submission_canonical:
+  path: '/admin/content/contact-form/{id}'
+  defaults:
+    _controller: '\Drupal\touch\Controller\TouchSubmissionCanonicalController::display'
+  requirements:
+    _permission: 'administer contact form submissions'
+
+touch.contact_form_submission_edit:
+  path: '/admin/content/contact-form/{id}/edit'
+  defaults:
+    _form: '\Drupal\touch\Form\TouchSubmissionEditForm'
+  requirements:
+    _permission: 'administer contact form submissions'
+
+touch.contact_form_submission_delete:
+  path: '/admin/content/contact-form/{id}/delete'
+  defaults:
+    _form: '\Drupal\touch\Form\TouchSubmissionDeleteForm'
+  requirements:
+    _permission: 'administer contact form submissions'

@@ -1,0 +1,6 @@
+# Exclude macOS files.
+.DS_Store
+
+# Exclude IDEs and editor files.
+.idea/
+.vscode/

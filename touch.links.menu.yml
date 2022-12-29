@@ -1,0 +1,5 @@
+touch.contact_form_submissions_list:
+  title: 'Contact form'
+  route_name: touch.contact_form_submissions_list
+  description: 'List all contact form submissions.'
+  parent: system.admin_content

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.mail
+    - taxonomy.vocabulary.contact_subjects
+id: taxonomy_term.contact_subjects.mail
+field_name: mail
+entity_type: taxonomy_term
+bundle: contact_subjects
+label: 'Email address'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

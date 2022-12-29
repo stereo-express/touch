@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Contact subjects'
+vid: contact_subjects
+description: 'Use contact subjects to send contact form submissions to different email address.'
+weight: 0

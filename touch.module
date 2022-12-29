@@ -1,0 +1,136 @@
+<?php
+
+/**
+ * @file
+ * Contains touch.module.
+ */
+
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_theme().
+ *
+ * @see hook_theme()
+ *
+ * @noinspection PhpUnused
+ */
+function touch_theme(): array {
+  $theme = [];
+
+  $theme['touch_contact_form'] = [
+    'render element' => 'form',
+  ];
+
+  $theme['touch_contact_form_mail'] = [
+    'variables' => [
+      'params' => [],
+    ],
+  ];
+
+  return $theme;
+}
+
+/**
+ * Implements hook_mail().
+ *
+ * @see hook_mail()
+ *
+ * @noinspection PhpUnused
+ */
+function touch_mail($key, &$message, $params): void {
+  if ($key === 'contact_form') {
+    // Set the formatted subject value.
+    $params['subject'] = ['id' => $params['subject_id'], 'name' => $params['subject_name']];
+
+    // Unset the subject id value as we use it in the formatted subject value.
+    unset($params['subject_id']);
+
+    // Unset the subject name value as we use it in the formatted subject value.
+    unset($params['subject_name']);
+
+    // Set the browser value.
+    $params['browser'] = $params['user_agent'];
+
+    // Set the operating system value.
+    $params['operating_system'] = $params['user_agent'];
+
+    $formattedParams = [
+      'site' => [
+        'label' => t('Site name'),
+        'value' => Drupal::config('system.site')->get('name'),
+      ],
+      'id' => [],
+      'name' => [],
+      'mail' => [],
+      'subject' => [],
+      'message' => [],
+      'newsletter' => [],
+      'language' => [],
+      'timestamp' => [],
+      'ip_address' => [],
+      'ip_address_proxy' => [],
+      'browser' => [],
+      'operating_system' => [],
+      'user_agent' => [],
+      'links' => [
+        'label' => t('Links'),
+        'value' => [
+          '#type' => 'markup',
+          '#markup' => implode(' ', [
+            Link::fromTextAndUrl(t('View'), Url::fromRoute('touch.contact_form_submission_canonical', ['id' => $params['id']], ['absolute' => TRUE]))->toString(),
+            Link::fromTextAndUrl(t('Edit'), Url::fromRoute('touch.contact_form_submission_edit', ['id' => $params['id']], ['absolute' => TRUE]))->toString(),
+            Link::fromTextAndUrl(t('Delete'), Url::fromRoute('touch.contact_form_submission_delete', ['id' => $params['id']], ['absolute' => TRUE]))->toString(),
+          ]),
+        ],
+      ],
+    ];
+
+    foreach ($params as $key => $value) {
+      $formattedParams[$key] = [
+        'label' => Drupal::service('touch.submissions_helper')->getLabel($key),
+        'value' => [
+          '#type' => 'markup',
+          '#markup' => Drupal::service('touch.submissions_helper')->getValue($key, $value),
+        ],
+      ];
+    }
+
+    $body = [
+      '#theme' => 'touch_contact_form_mail',
+      '#params' => $formattedParams,
+    ];
+
+    // Configure the mail subject.
+    $message['subject'] = t('Submission by %name on %date', [
+      '%name' => Drupal::service('touch.submissions_helper')->getValue('name', $params['name']),
+      '%date' => Drupal::service('touch.submissions_helper')->getValue('timestamp', $params['timestamp']),
+    ]);
+
+    // Configure the mail body.
+    $message['body'][] = Drupal::service('renderer')->render($body);
+  }
+}
+
+/**
+ * Implements hook_field_widget_info_alter().
+ *
+ * Allow the contact form field to use "options select" and "options buttons" as
+ * form widgets.
+ *
+ * @see hook_field_widget_info_alter()
+ *
+ * @noinspection PhpUnused
+ * @noinspection PhpDocSignatureInspection
+ */
+function touch_field_widget_info_alter(&$info): void {
+  // Allow the "options select" form widget to be used by the contact form field.
+  if (!empty($info['options_select'])) {
+    $info['options_select']['field_types'][] = 'touch_contact_form';
+  }
+
+  // Allow the "options buttons" form widget to be used by the contact form field.
+  if (!empty($info['options_buttons'])) {
+    $info['options_buttons']['field_types'][] = 'touch_contact_form';
+  }
+}

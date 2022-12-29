@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.contact_subjects
+    - paragraphs.paragraphs_type.contact_form
+    - taxonomy.vocabulary.contact_subjects
+  module:
+    - touch
+id: paragraph.contact_form.contact_subjects
+field_name: contact_subjects
+entity_type: paragraph
+bundle: contact_form
+label: 'Available contact subjects'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      contact_subjects: contact_subjects
+    sort:
+      field: name
+      direction: asc
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: touch_contact_form

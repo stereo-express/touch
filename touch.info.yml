@@ -1,0 +1,11 @@
+type: module
+name: 'Touch'
+description: 'Defines a contact form with subjects related to email addresses to dispatch form submissions.'
+package: 'Stereo Express'
+
+core_version_requirement: ^9.0 || ^10.0
+php: 8.1
+
+dependencies:
+  - drupal:inline_form_errors
+  - drupal:taxonomy

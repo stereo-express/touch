@@ -1,0 +1,20 @@
+touch.contact_form_submissions_list:
+  route_name: touch.contact_form_submissions_list
+  base_route: system.admin_content
+  title: 'Contact form'
+  weight: -10
+
+touch.contact_form_submission_canonical:
+  route_name: touch.contact_form_submission_canonical
+  base_route: touch.contact_form_submission_canonical
+  title: 'View'
+
+touch.contact_form_submission_edit:
+  route_name: touch.contact_form_submission_edit
+  base_route: touch.contact_form_submission_canonical
+  title: 'Edit'
+
+touch.contact_form_submission_delete:
+  route_name: touch.contact_form_submission_delete
+  base_route: touch.contact_form_submission_canonical
+  title: 'Delete'

@@ -1,0 +1,8 @@
+<pre>
+{{ 'A new submission has been submitted on your site. Details are bellow.' | trans }}<br />
+</pre>
+{% for param in params %}
+<pre>
+<strong>{{ param.label }}</strong>: {{ param.value }}<hr />
+</pre>
+{% endfor %}

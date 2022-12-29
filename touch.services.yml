@@ -1,0 +1,7 @@
+services:
+  touch.options_helper:
+    class: Drupal\touch\TouchOptionsHelper
+    arguments: [ '@entity_type.manager', '@language_manager' ]
+  touch.submissions_helper:
+    class: Drupal\touch\TouchSubmissionsHelper
+    arguments: [ '@database', '@date.formatter', '@entity_type.manager', '@language_manager' ]

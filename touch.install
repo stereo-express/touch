@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * @file
+ * Contains touch.install.
+ */
+
+use Drupal\Core\Render\Element\Email;
+
+/**
+ * Implements hook_schema().
+ *
+ * @see hook_schema()
+ *
+ * @noinspection PhpUnused
+ */
+function touch_schema(): array {
+  $schema['touch_contact_form_submissions'] = [
+    'description' => 'Stores contact form submissions.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key: Unique contact form submission ID.',
+        'type' => 'serial',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+      ],
+      'name' => [
+        'description' => 'The name entered by the user who submitted the contact form.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'mail' => [
+        'description' => 'The email entered by the user who submitted the contact form.',
+        'type' => 'varchar',
+        'length' => Email::EMAIL_MAX_LENGTH,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'subject_id' => [
+        'description' => 'The contact subject taxonomy term id chosen by the user who submitted the contact form.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'default' => 0,
+      ],
+      'subject_name' => [
+        'description' => 'The contact subject taxonomy term name chosen by the user who submitted the contact form.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '0',
+      ],
+      'message' => [
+        'description' => 'The message entered by the user who submitted the contact form.',
+        'type' => 'text',
+        'size' => 'normal',
+        'not null' => TRUE,
+      ],
+      'newsletter' => [
+        'description' => 'The newsletter preference entered by the user who submitted the contact form.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'default' => 0,
+      ],
+      'language' => [
+        'description' => 'The language of the page where the user submitted the contact form.',
+        'type' => 'varchar',
+        'length' => 12,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'timestamp' => [
+        'description' => 'The timestamp when the user submitted the contact form.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'default' => 0,
+      ],
+      'ip_address' => [
+        'description' => 'The IP address of the user who submitted the contact form.',
+        'type' => 'varchar',
+        'length' => 45,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'ip_address_proxy' => [
+        'description' => 'The proxy IP address of the user who submitted the contact form.',
+        'type' => 'varchar',
+        'length' => 45,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'user_agent' => [
+        'description' => 'The user agent of the user who submitted the contact form.',
+        'type' => 'text',
+        'size' => 'normal',
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

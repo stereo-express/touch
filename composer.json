@@ -1,0 +1,17 @@
+{
+    "name": "stereo-express/touch",
+    "description": "Defines a contact form with subjects related to email addresses to dispatch form submissions.",
+    "type": "drupal-custom-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Marc-Olivier Fortin",
+            "email": "info@marcolivierfortin.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Drupal\\touch\\": "src/"
+        }
+    }
+}

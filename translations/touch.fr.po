@@ -1,0 +1,267 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  touch.module: n/a
+#  touch.links.task.yml: n/a
+#  src/TouchSubmissionsHelper.php: n/a
+#  src/Form/TouchSubmissionDeleteForm.php: n/a
+#  src/Form/TouchSubmissionEditForm.php: n/a
+#  src/Controller/TouchSubmissionCanonicalController.php: n/a
+#  touch.info.yml: n/a
+#  touch.links.menu.yml: n/a
+#  touch.routing.yml: n/a
+#  src/Plugin/Field/FieldFormatter/TouchContactFormFormatter.php: n/a
+#  src/Plugin/Field/FieldType/TouchContactFormItem.php: n/a
+#  config/optional/paragraphs.paragraphs_type.contact_form.yml: n/a
+#  touch.permissions.yml: n/a
+#  src/Form/TouchContactForm.php: n/a
+#  templates/touch-contact-form-mail.html.twig: n/a
+#  config/install/taxonomy.vocabulary.contact_subjects.yml: n/a
+#  config/optional/field.field.paragraph.contact_form.contact_subjects.yml: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2022-12-29 15:14-0500\n"
+"PO-Revision-Date: 2022-12-29 15:14-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: touch.module:60
+msgid "Site name"
+msgstr "Nom du site"
+
+#: touch.module:77
+msgid "Links"
+msgstr "Liens"
+
+#: touch.module:81 touch.links.task.yml:0 src/TouchSubmissionsHelper.php:100
+msgid "View"
+msgstr "Voir"
+
+#: touch.module:82 touch.links.task.yml:0 src/TouchSubmissionsHelper.php:101
+msgid "Edit"
+msgstr "Modifier"
+
+#: touch.module:83 touch.links.task.yml:0 src/TouchSubmissionsHelper.php:102 src/Form/TouchSubmissionDeleteForm.php:104 src/Form/TouchSubmissionEditForm.php:231
+msgid "Delete"
+msgstr "Supprimer"
+
+#: touch.module:105 src/Controller/TouchSubmissionCanonicalController.php:104 src/Form/TouchSubmissionEditForm.php:114
+msgid "Submission by %name on %date"
+msgstr "Soumission par %name le %date"
+
+#: touch.info.yml:0
+msgid "Touch"
+msgstr "Touch"
+
+#: touch.info.yml:0
+msgid "Defines a contact form with subjects related to email addresses to dispatch form submissions."
+msgstr ""
+"Définit un formulaire de contact avec des sujets liés à des "
+"adresses de courriel pour envoyer des soumissions de formulaire."
+
+#: touch.info.yml:0
+msgid "Stereo Express"
+msgstr "Stereo Express"
+
+#: touch.links.menu.yml:0 touch.links.task.yml:0 touch.routing.yml:0 src/Plugin/Field/FieldFormatter/TouchContactFormFormatter.php:12 src/Plugin/Field/FieldType/TouchContactFormItem.php:8 config/optional/paragraphs.paragraphs_type.contact_form.yml:0
+msgid "Contact form"
+msgstr "Formulaire de contact"
+
+#: touch.links.menu.yml:0
+msgid "List all contact form submissions."
+msgstr "Liste toutes les soumissions de formulaire de contact."
+
+#: touch.permissions.yml:0
+msgid "Submit contact form submissions"
+msgstr "Soumettre des soumissions de formulaire de contact"
+
+#: touch.permissions.yml:0
+msgid "Allow to fill and submit contact forms."
+msgstr "Permet de remplir et soumettre des formulaires de contact."
+
+#: touch.permissions.yml:0
+msgid "Administer contact form submissions"
+msgstr "Administrer les soumissions de formulaire de contact"
+
+#: touch.permissions.yml:0
+msgid "Allow to list of all submissions, view, edit and delete each of them."
+msgstr ""
+"Permet de lister toutes les soumissions, voir, modifier et supprimer "
+"chacune d’elles."
+
+#: touch.permissions.yml:0
+msgid "Administer contact forms"
+msgstr "Administrer les formulaires de contact"
+
+#: touch.permissions.yml:0
+msgid "Allow to change each contact form settings."
+msgstr "Permet de changer les paramètres de chaque formulaire de contact."
+
+#: src/TouchSubmissionsHelper.php:86
+msgid "ID"
+msgstr "Identifiant (ID)"
+
+#: src/TouchSubmissionsHelper.php:87 src/Form/TouchSubmissionEditForm.php:122
+msgid "Name"
+msgstr "Nom"
+
+#: src/TouchSubmissionsHelper.php:88 src/Form/TouchContactForm.php:173 src/Form/TouchSubmissionEditForm.php:131
+msgid "Email address"
+msgstr "Adresse de courriel"
+
+#: src/TouchSubmissionsHelper.php:89 src/Form/TouchSubmissionEditForm.php:143;157
+msgid "Subject"
+msgstr "Objet"
+
+#: src/TouchSubmissionsHelper.php:90 src/Form/TouchContactForm.php:236 src/Form/TouchSubmissionEditForm.php:166
+msgid "Message"
+msgstr "Message"
+
+#: src/TouchSubmissionsHelper.php:91 src/Form/TouchSubmissionEditForm.php:174
+msgid "Newsletter subscription"
+msgstr "Inscription à l’infolettre"
+
+#: src/TouchSubmissionsHelper.php:92 src/Form/TouchSubmissionEditForm.php:183
+msgid "Language"
+msgstr "Langue"
+
+#: src/TouchSubmissionsHelper.php:93 src/Form/TouchSubmissionEditForm.php:192
+msgid "Date"
+msgstr "Date"
+
+#: src/TouchSubmissionsHelper.php:94 src/Form/TouchSubmissionEditForm.php:201
+msgid "IP address"
+msgstr "Adresse IP"
+
+#: src/TouchSubmissionsHelper.php:95 src/Form/TouchSubmissionEditForm.php:209
+msgid "IP address (proxy)"
+msgstr "Adresse IP (proxy)"
+
+#: src/TouchSubmissionsHelper.php:96
+msgid "Browser"
+msgstr "Navigateur"
+
+#: src/TouchSubmissionsHelper.php:97
+msgid "Operating system"
+msgstr "Système d’exploitation"
+
+#: src/TouchSubmissionsHelper.php:98 src/Form/TouchSubmissionEditForm.php:217
+msgid "User agent"
+msgstr "Agent utilisateur"
+
+#: src/TouchSubmissionsHelper.php:99
+msgid "Operations"
+msgstr "Actions"
+
+#: src/TouchSubmissionsHelper.php:140
+msgid "Yes"
+msgstr "Oui"
+
+#: src/TouchSubmissionsHelper.php:140
+msgid "No"
+msgstr "Non"
+
+#: src/TouchSubmissionsHelper.php:143
+msgid "This value is coming soon as a compatible library version is about to be released."
+msgstr ""
+"Cette valeur viendra sous peu étant donné qu’une version "
+"compatible d’une bibliothèque sera bientôt lancée."
+
+#: src/Form/TouchContactForm.php:163
+msgid "My name is"
+msgstr "Mon nom est"
+
+#: src/Form/TouchContactForm.php:164
+msgid "Complete name"
+msgstr "Nom complet"
+
+#: src/Form/TouchContactForm.php:172
+msgid "I'm reachable at"
+msgstr "Je suis joignable à"
+
+#: src/Form/TouchContactForm.php:200
+msgid "I write to you about"
+msgstr "Je vous écris à propos"
+
+#: src/Form/TouchContactForm.php:235
+msgid "I also have some details"
+msgstr "J’ai aussi quelques détails"
+
+#: src/Form/TouchContactForm.php:243
+msgid "I would like to receive occasional news"
+msgstr "J’aimerais recevoir des nouvelles occasionnelles"
+
+#: src/Form/TouchContactForm.php:261
+msgid "Send"
+msgstr "Envoyer"
+
+#: src/Form/TouchContactForm.php:313
+msgid "Thank you for contacting me, I'll reach back to you shortly."
+msgstr "Merci de m’avoir contacté, je vous reviendrai sous peu."
+
+#: src/Form/TouchContactForm.php:478
+msgid "Undefined subject"
+msgstr "Sujet non-défini"
+
+#: src/Form/TouchSubmissionDeleteForm.php:76;81
+msgid "The submission by %name on %date has been deleted."
+msgstr "La soumission par %name le %date a été supprimée."
+
+#: src/Form/TouchSubmissionDeleteForm.php:94
+msgid "Are you sure you want to delete the submission by %name on %date?"
+msgstr "Êtes-vous sûr de vouloir supprimer la soumission par %name le %date?"
+
+#: src/Form/TouchSubmissionEditForm.php:225
+msgid "Save"
+msgstr "Enregistrer"
+
+#: src/Form/TouchSubmissionEditForm.php:268
+msgid "The submission by %name on %date has been successfully saved."
+msgstr "La soumission par %name le %date a été supprimée avec succès."
+
+#: src/Plugin/Field/FieldFormatter/TouchContactFormFormatter.php:12 src/Plugin/Field/FieldType/TouchContactFormItem.php:8
+msgid "A contact form diplaying subjects options from taxonomy term entity."
+msgstr ""
+"Un formulaire de contact affichant des options de sujets provenant de "
+"d’entités de termes de taxonomie."
+
+#: src/Plugin/Field/FieldType/TouchContactFormItem.php:61
+msgid "Type of item to reference"
+msgstr "Type d'élément à référencer"
+
+#: src/Plugin/Field/FieldType/TouchContactFormItem.php:62
+msgid "Taxonomy term"
+msgstr "Terme de taxonomie"
+
+#: src/Plugin/Field/FieldType/TouchContactFormItem.php:8
+msgid "Reference"
+msgstr "Référence"
+
+#: templates/touch-contact-form-mail.html.twig:2
+msgid "A new submission has been submitted on your site. Details are bellow."
+msgstr ""
+"Une nouvelle soumission a été soumise sur votre site. Les détails "
+"sont ci-bas."
+
+#: config/install/taxonomy.vocabulary.contact_subjects.yml:0
+msgid "Contact subjects"
+msgstr "Sujets de contact"
+
+#: config/install/taxonomy.vocabulary.contact_subjects.yml:0
+msgid "Use contact subjects to send contact form submissions to different email address."
+msgstr ""
+"Utilisez les sujets de contact pour envoyer des soumissions de "
+"formulaire de contact à des adresses de courriel différentes."
+
+#: config/optional/field.field.paragraph.contact_form.contact_subjects.yml:0
+msgid "Available contact subjects"
+msgstr "Sujets de contact disponibles"

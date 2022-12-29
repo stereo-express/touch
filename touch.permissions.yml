@@ -1,0 +1,11 @@
+submit contact form submissions:
+  title: 'Submit contact form submissions'
+  description: 'Allow to fill and submit contact forms.'
+
+administer contact form submissions:
+  title: 'Administer contact form submissions'
+  description: 'Allow to list of all submissions, view, edit and delete each of them.'
+
+administer contact forms:
+  title: 'Administer contact forms'
+  description: 'Allow to change each contact form settings.'

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.contact_subjects.mail
+    - taxonomy.vocabulary.contact_subjects
+  module:
+    - text
+id: taxonomy_term.contact_subjects.default
+targetEntityType: taxonomy_term
+bundle: contact_subjects
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  mail: true
